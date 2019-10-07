@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+    
+
+
+    <head>
+        <title>Pollution</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    
+    <body id="ContainerBody">
+        
+        <div class="row">
+            <div class="col float-right">
+            <button onclick="ChangerTheme()">Changer theme</button>
+
+            </div>
+        </div>
+
+        <header id="pagetop">
+            <p class="Nom">Information sur la pollution des voitures</p>
+
+            <p>
+                utilisation de l'api : <a href="https://public.opendatasoft.com">https://public.opendatasoft.com</a>
+            </p>
+
+            <div id="BlocRecherche"> 
+                <label for="recherche"></label>
+                <input name="recherche" type="text" id="saisie" >
+                <button onclick="Rechercher()">Rechercher</button>
+            </div>
+        </header>
+        
+            
+        <div id="BlocInfo" class="cacher">
+            <button onclick="ElementAAfficher(false,true,false)" >Retour</button>
+            <h2 id=info_nom>_Nom_</h2>
+
+            <div>
+                <b>Carburant</b> : <span id="info_carburant"></span> <br>
+                <b>Niveau CO2</b> : <span id="info_co2"></span> <br>
+                <b>Consomation urbaine</b> : <span id="info_consourbaine"></span> <br>
+                <b>Consomation mix</b> : <span id="info_consomix"></span>
+            </div>
+
+        </div>
+                
+
+        <div id="BlocModele" class="cacher">
+            <button onclick="ElementAAfficher(true,false,false)" >Retour</button>
+
+            <h1 id="NomMarque">_nom_</h1>
+            <div id="ListeModele">
+
+            </div>
+        </div>
+
+            
+        <div id="BlocMarque">
+            <button class="marque" onclick="GetModele('audi')">Audi</button>
+            <button class="marque" onclick="GetModele('BMW')">BMW</button>
+            <button class="marque" onclick="GetModele('Citroen')">Citroen</button>
+            <button class="marque" onclick="GetModele('Ford')">Ford</button>
+            <button class="marque" onclick="GetModele('Dacia')">Dacia</button>
+            <button class="marque" onclick="GetModele('Fiat')">Fiat</button>
+            <button class="marque" onclick="GetModele('Peugeot')">Peugeot</button>
+            <button class="marque" onclick="GetModele('Renault')">Renault</button>
+            <button class="marque" onclick="GetModele('Honda')">Honda</button>
+            <button class="marque" onclick="GetModele('Mazda')">Mazda</button>
+            <button class="marque" onclick="GetModele('Ferrari')">Ferrari</button>
+            <button class="marque" onclick="GetModele('Lamborghini')">Lamborghini</button>
+            <button class="marque" onclick="GetModele('Bentley')">Bentley</button>
+            <button class="marque" onclick="GetModele('Rolls Royce')">Rolls Royce</button>
+
+
+        </div>
+
+                
+        <!-- <footer id="pagebottom">FOOTER</footer> -->
+
+
+        <script src="script.js" type="text/javascript"></script>
+
+    </body>
+    
+    
+</html>

@@ -1,0 +1,32 @@
+body{
+  background-color:#ACC581;
+  text-align: center;
+  margin:0 30%;
+}
+
+.cacher{
+  display: none;
+}
+
+#NomMarque{
+  text-transform: uppercase;
+}
+
+
+ 
+.marque, .modele{
+  width: 47%;
+  padding: 1% 1.5%;
+  margin:6px;
+}
+
+.dark {
+  background-color: #303030;
+  color: #fff;
+  transition: all 2s;
+}
+
+.light{
+  background-color: #ACC581;
+  transition: all 2s;
+}
