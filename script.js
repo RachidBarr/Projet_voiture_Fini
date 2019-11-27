@@ -1,5 +1,6 @@
 var urlApi = "https://public.opendatasoft.com/api/records/1.0/search/?dataset=vehicules-commercialises&facet=marque&facet=modele_utac&facet=carburant&facet=hybride&facet=puissance_administrative&facet=boite_de_vitesse&facet=annee&facet=carrosserie&facet=gamme";
 
+
 function GetModele(marque){
 
    var xhttp = new XMLHttpRequest();
@@ -11,16 +12,18 @@ function GetModele(marque){
 
       var nomMarque = document.getElementById("NomMarque");
       nomMarque.innerHTML = marque;
-
+        
       ElementAAfficher(false, true, false);
 
       ListerModele(result);
+      
     }
   };
   xhttp.open("GET", url, true);
   xhttp.send();
 
 }
+
 
 function ListerModele(listeModele){
     var elements = "";
